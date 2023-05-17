@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { faker } from '@faker-js/faker';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="ui comments">
+        <div className="comment">
+          <a className="avatar">
+            <img alt="Avatar" src={faker.image.avatar()} />
+          </a>
+          <div className="content">
+            <a className="author">Stevie Feliciano</a>
+            <div className="metadata">
+              <div className="date">2 days ago</div>
+              <div className="rating">
+                <i className="star icon"></i>
+                5 Faves
+              </div>
+            </div>
+            <div className="text">
+              Hey guys, I hope this example comment is helping you read this documentation.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
